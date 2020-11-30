@@ -17,12 +17,25 @@
 </header>
 <hr>
 
-<?php
-$friends = array("kevin", "karen", "oscar", "jim");
-$friends[10] = "Dwight";
+<center>
+<form action="site.php" method="post">
 
-echo count($friends);
+Name: <input type="text" name = "student" ><br>
+
+<input type="submit">
+
+</form>
+
+<?php
+$grades = array("Jim" => "A+", "Pam" => "B-", "Karen" => "C+");
+
+echo $grades[$_POST["student"]];
+
 ?>
+
+
+</center>
+
 
     <!-- Scripts-->
     <script src="" async defer>

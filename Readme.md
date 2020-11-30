@@ -65,3 +65,6 @@ store in4 => not secure
 **POST vs GET**
 $_POST = hides in4 url
 $_GET = displays in4 url
+
+ **Associative Arrays**
+ key =>
