@@ -14,11 +14,18 @@
 <body>
 
   <?php
-  $phrase = "To be ";
-  $age = 30;
-  $gba = 30.3;
-  $isMale= false;
-  
+  $phrase = "Giraffe Academy <br>";
+
+  echo strtolower($phrase);
+  echo strtoupper($phrase);
+  echo strlen($phrase);
+
+  echo $phrase[0];
+  echo $phrase[0] = "B";
+
+  echo str_replace("<br>Giraffe", "Panda", $phrase);
+
+  echo substr($phrase, 8,);
   ?>
 
 
