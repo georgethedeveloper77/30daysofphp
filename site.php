@@ -8,33 +8,21 @@
   <title>30DaysOfPHP</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+<header>
+<h2> PHP Basics</h2>
+</header>
+<hr>
 
+<?php
+$friends = array("kevin", "karen", "oscar", "jim");
+$friends[10] = "Dwight";
 
-  <form action="site.php" method="get">
-    Color: <input type="text" name="color">
-    <br>
-    Plural Noun: <input type="text" name="pluralNoun">
-    <br>
-    Celbritye: <input type="text" name="celebrity">
-    <br>
-
-    <input type="submit"></form>
-
-    Answer:
-    <?php
-$color = $_GET["color"];
-$pluralNoun = $_GET["pluralNoun"];
-$celebrity = $_GET["celebrity"];
-
-echo "Rose are $color <br>";
-echo "$pluralNoun are blue <br>";
-echo "i love $celebrity <br>";
+echo count($friends);
 ?>
-
 
     <!-- Scripts-->
     <script src="" async defer>

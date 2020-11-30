@@ -39,7 +39,7 @@ containers
 3. floats
 4. boolean
 5. null
-   
+
 **working with strings**
  $phrase = "Giraffe Academy <br>";
  echo strtolower($phrase);
@@ -58,3 +58,10 @@ containers
 5. min(,);
 6. cell();
 7. floor();
+
+**url Parameters**
+store in4 => not secure
+
+**POST vs GET**
+$_POST = hides in4 url
+$_GET = displays in4 url
