@@ -13,22 +13,24 @@
 
 <body>
 
+
+  <form action="site.php" method="get">
+    Name: <input type="text" name="name">
+    Age: <input type="text" name="age">
+    <input type="submit">
+  </form>
+  <br>
+  your name is
   <?php
-  $phrase = "Giraffe Academy <br>";
-
-  echo strtolower($phrase);
-  echo strtoupper($phrase);
-  echo strlen($phrase);
-
-  echo $phrase[0];
-  echo $phrase[0] = "B";
-
-  echo str_replace("<br>Giraffe", "Panda", $phrase);
-
-  echo substr($phrase, 8,);
+  echo  $_GET["name"];
+  ?>
+  <br>
+  your age is
+  <?php
+  echo  $_GET["age"];
   ?>
 
-
+  <!-- Scripts-->
   <script src="" async defer>
   </script>
 </body>

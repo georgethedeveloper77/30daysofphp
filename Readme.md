@@ -39,3 +39,22 @@ containers
 3. floats
 4. boolean
 5. null
+   
+**working with strings**
+ $phrase = "Giraffe Academy <br>";
+ echo strtolower($phrase);
+ echo strtoupper($phrase);
+ echo strlen($phrase);
+ echo $phrase[0];
+ echo $phrase[0] = "B";
+ echo str_replace("<br>Giraffe", "Panda", $phrase);
+ echo substr($phrase, 8,);
+
+**working with numbers**
+1. abs();
+2. pow();
+3. sqrt();
+4. max(,);
+5. min(,);
+6. cell();
+7. floor();
