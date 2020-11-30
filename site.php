@@ -14,23 +14,11 @@
 <body>
 
   <?php
-  $name = "George";
+  $phrase = "To be ";
   $age = 30;
-
-  echo "There once wa a man named $name <br>";
-  echo "He was $age years old <br>";
-  echo "He really liked the name $name<br>";
-  echo "but didn't liked being $age years old <br>";
-
-
-
-  $name = "Bloom";
-  $age = 22;
-
-  echo "<br>There once wa a man named $name <br>";
-  echo "He was $age years old <br>";
-  echo "He really liked the name $name<br>";
-  echo "but didn't liked being $age years old <br>";
+  $gba = 30.3;
+  $isMale= false;
+  
   ?>
 
 
