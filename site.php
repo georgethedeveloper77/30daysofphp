@@ -15,20 +15,15 @@
 
 
   <form action="site.php" method="get">
-    Name: <input type="text" name="name">
-    Age: <input type="text" name="age">
+    <input type="number" name="num1">
+    <br>
+    <input type="number" name="num2">
     <input type="submit">
   </form>
-  <br>
-  your name is
-  <?php
-  echo  $_GET["name"];
-  ?>
-  <br>
-  your age is
-  <?php
-  echo  $_GET["age"];
-  ?>
+
+  Answer:
+  <?php echo $_GET["num1"] +  $_GET["num2"] ?>
+
 
   <!-- Scripts-->
   <script src="" async defer>
