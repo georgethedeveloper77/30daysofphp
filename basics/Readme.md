@@ -68,3 +68,4 @@ $_GET = displays in4 url
 
  **Associative Arrays**
  key =>
+ echo $grades[$_POST["student"]];

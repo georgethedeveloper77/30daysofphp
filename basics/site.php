@@ -18,18 +18,9 @@
 <hr>
 
 <center>
-<form action="site.php" method="post">
 
-Name: <input type="text" name = "student" ><br>
-
-<input type="submit">
-
-</form>
 
 <?php
-$grades = array("Jim" => "A+", "Pam" => "B-", "Karen" => "C+");
-
-echo $grades[$_POST["student"]];
 
 ?>
 
