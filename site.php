@@ -15,19 +15,30 @@
 
 
   <form action="site.php" method="get">
-    <input type="number" name="num1">
+    Color: <input type="text" name="color">
     <br>
-    <input type="number" name="num2">
-    <input type="submit">
-  </form>
+    Plural Noun: <input type="text" name="pluralNoun">
+    <br>
+    Celbritye: <input type="text" name="celebrity">
+    <br>
 
-  Answer:
-  <?php echo $_GET["num1"] +  $_GET["num2"] ?>
+    <input type="submit"></form>
+
+    Answer:
+    <?php
+$color = $_GET["color"];
+$pluralNoun = $_GET["pluralNoun"];
+$celebrity = $_GET["celebrity"];
+
+echo "Rose are $color <br>";
+echo "$pluralNoun are blue <br>";
+echo "i love $celebrity <br>";
+?>
 
 
-  <!-- Scripts-->
-  <script src="" async defer>
-  </script>
+    <!-- Scripts-->
+    <script src="" async defer>
+    </script>
 </body>
 
 </html>
