@@ -1,10 +1,10 @@
 <?php
 
 // 1. Create simple string
-$string = "Hello TheCodeholic"; // 2. Extract TheCodeholic into variable
-$string2 = 'Hello TheCodeholic'; // 3. Replace TheCodeholic with variable
+$string = "Hello George"; // 2. Extract George into variable
+$string2 = 'Hello George'; // 3. Replace TGeorge with variable
 echo $string . '<br>';
-echo $string2 . '<br>';
+echo $string2 . '<br><br>';
 
 // String concatenation
 echo "Hello " . " World"; // Multiple concatenation . " and PHP";
@@ -57,4 +57,4 @@ echo "4 - " . nl2br(htmlentities($longText)) . '<br>' . PHP_EOL;
 echo "5 - " . html_entity_decode(htmlentities($longText)) . '<br>' . PHP_EOL;
 echo "6 - " . htmlspecialchars($longText) . '<br>' . PHP_EOL;
 
-// https://www.php.net/manual/en/ref.strings.php
+echo "<a href='https://www.php.net/manual/en/ref.strings.php'>https://www.php.net/manual/en/ref.strings.php</a>";
