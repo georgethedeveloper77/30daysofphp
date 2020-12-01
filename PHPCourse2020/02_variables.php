@@ -1,3 +1,7 @@
+<Header>
+
+    <h1 style="position: center">Variables</h1>
+</Header>
 <?php
 
 // What is a variable
@@ -15,7 +19,7 @@
 */
 
 // 1. Declare variables
-$name = "Zura";
+$name = "<h2>Julian</h2>";
 $age = 28;
 $isMale = true; // 3. Change into false
 $height = 1.85;
@@ -38,6 +42,7 @@ echo gettype($salary) . '<br>';
 // 5. Print the whole variable
 var_dump($name, $age, $isMale, $height, $salary);
 
+
 // 6. Change the value of the variable
 $name = false;
 
@@ -55,12 +60,14 @@ var_dump(isset($name));
 var_dump(isset($name2));
 echo '<br>';
 
-// 10. Constants
+// 10. Constants no $
 define('PI', 3.14);
 echo PI.'<br>';
+
 var_dump(defined('PI')); // defined(PI2)
 echo '<br>';
 
 // 12. Using PHP built-in constants
 echo SORT_ASC.'<br>';
 echo PHP_INT_MAX.'<br>';
+

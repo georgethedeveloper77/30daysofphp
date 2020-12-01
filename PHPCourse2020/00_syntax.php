@@ -9,7 +9,7 @@
 </head>
 <body>
 <header>
-    Hello World
+    Syntax
     <hr>
 </header>
 

@@ -9,5 +9,11 @@ with some
 long text
 */
 ?>
+<header>
 
-<button class="btn btn-primary">ClickMe</button>
+    <h1 style="align-content: center">Comments</h1>
+    <hr>
+</header>
+<Center>
+    <button style="color: aqua">ClickMe</button>
+</Center>
