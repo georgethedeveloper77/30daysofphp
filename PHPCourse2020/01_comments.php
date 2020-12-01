@@ -8,3 +8,6 @@ Multiline comment
 with some
 long text
 */
+?>
+
+<button class="btn btn-primary">ClickMe</button>
