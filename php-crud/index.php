@@ -15,10 +15,31 @@
 
 </head>
 
+<header>
+    <center>
+        <h1 style="color: crimson; align-content: center">Billionaires</h1>
+    </center>
+</header>
+<hr>
+
 <body>
   <?php require_once 'process.php';?>
-  <!-- Connect to database-->
+
   <?php
+  if (isset($_SESSION['message'])):
+  ?>
+  <div class="alert alert-<?=$_SESSION['msg_type']?>">
+    <?php
+      echo  $_SESSION['message'];
+      unset($_SESSION['message']);
+      ?>
+  </div>
+  <?php endif;?>
+
+
+  <div class="container">
+    <!-- Connect to database-->
+    <?php
 $mysqli = new mysqli('localhost', 'root', '', 'crud') or die(mysqli_error($mysqli));
 // <!----run query--->
 $result = $mysqli->query("SELECT * FROM data") or die($mysqli->error);
@@ -26,30 +47,34 @@ $result = $mysqli->query("SELECT * FROM data") or die($mysqli->error);
 //pre_r($result->fetch_assoc()); // <!----fetch_assoc method to pull data from database...thus create a while loop--->
   ?>
 
-  <div class="row justify-content-center">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Location</th>
-          <th colspan="2">Action</th>
-        </tr>
-      </thead>
+    <div class="row justify-content-center">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Location</th>
+            <th colspan="2">Action</th>
+          </tr>
+        </thead>
 
-      <?php
+        <?php
       /*this is pulling records from database & store them on table...note :*/
           while ($row = $result->fetch_assoc()):  
           ?>
-      <tr>
-        <!-- printing actual values-->
-        <td> <?php echo $row['name'];?> </td>
-        <td> <?php echo $row['location'];?> </td>
-        <td></td>
-      </tr>
-      <?php endwhile;?>
-    </table>
-  </div>
-  <?php
+        <tr>
+          <!-- printing actual values-->
+          <td> <?php echo $row['name'];?> </td>
+          <td> <?php echo $row['location'];?> </td>
+          <td>
+            <a href="index.php?edit=<?php echo  $row['id'];?>" class="btn btn-info">Edit</a>
+            <a href="process.php?delete=<?php echo  $row['id'];?>" class="btn btn-danger">Delete</a>
+          </td>
+        </tr>
+        <?php endwhile;?>
+      </table>
+    </div>
+
+    <?php
 function pre_r($array)
 {
     echo '<pre>';
@@ -58,24 +83,36 @@ function pre_r($array)
 }
 ?>
 
-  <div class="row justify-content-center">
-    <form action="process.php" method="POST">
+    <div class="row justify-content-center">
+      <form action="process.php" method="POST">
 
-      <div class="form-group">
-        <label>Name</label>
-        <input type="text" name="name" class="form-control" value="Enter Your name">
-      </div>
+          <!--Input hidden field to enable update-->
+          <input type="hidden" name="id" value="<?php echo $id; ?>">
 
-      <div class="form-group">
-        <label>Location</label>
-        <input type="text" name="location" class="form-control" value="Enter Location">
-      </div>
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" name="name" class="form-control"
+                 value="<?php echo $name; ?>" placeholder="Enter Your name">
+        </div>
 
-      <div class="form-group">
-        <button type="submit " class="btn btn-primary" name="save">Save</button>
-      </div>
+        <div class="form-group">
+          <label>Location</label>
+          <input type="text" name="location" class="form-control"
+                 value="<?php echo $location; ?>" placeholder="Enter Location">
+        </div>
 
-    </form>
+        <div class="form-group">
+            <?php if($update == true): ?>
+            <button type="submit " class="btn btn-success" name="update">Update</button>
+            <?php else:?>
+          <button type="submit " class="btn btn-primary" name="save">Save</button>
+            <?php
+             endif;
+            ?>
+        </div>
+
+      </form>
+    </div>
   </div>
 
 
