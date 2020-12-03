@@ -18,12 +18,17 @@
 <body>
   <?php require_once 'process.php';?>
 
+
+  <!-- Connect to database-->
   <?php
 $mysqli = new mysqli('localhost', 'root', '', 'crud') or die(mysqli_error($mysqli));
-
+// <!----run query--->
 $result = $mysqli->query("SELECT * FROM data") or die($mysqli->error);
-pre_r($result);
+//pre_r($result);
+//pre_r($result->fetch_assoc()); // <!----fetch_assoc method to pull data from database...thus create a while loop--->
+  ?>
 
+  <?php
 function pre_r($array)
 {
     echo '<pre>';

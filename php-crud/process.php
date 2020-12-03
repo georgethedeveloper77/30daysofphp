@@ -1,7 +1,7 @@
 <?php
 
 // $mysqli = new mysqli('localhost', 'ras', '@Kathuemmah77', 'crud') or die(mysqli_error($mysqli));
-
+//  <!-- Connect to database-->
 $mysqli = new mysqli('localhost', 'root', '', 'crud') or die(mysqli_error($mysqli));
 
 
