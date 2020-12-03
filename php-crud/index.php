@@ -17,8 +17,6 @@
 
 <body>
   <?php require_once 'process.php';?>
-
-
   <!-- Connect to database-->
   <?php
 $mysqli = new mysqli('localhost', 'root', '', 'crud') or die(mysqli_error($mysqli));
@@ -28,6 +26,29 @@ $result = $mysqli->query("SELECT * FROM data") or die($mysqli->error);
 //pre_r($result->fetch_assoc()); // <!----fetch_assoc method to pull data from database...thus create a while loop--->
   ?>
 
+  <div class="row justify-content-center">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Location</th>
+          <th colspan="2">Action</th>
+        </tr>
+      </thead>
+
+      <?php
+      /*this is pulling records from database & store them on table...note :*/
+          while ($row = $result->fetch_assoc()):  
+          ?>
+      <tr>
+        <!-- printing actual values-->
+        <td> <?php echo $row['name'];?> </td>
+        <td> <?php echo $row['location'];?> </td>
+        <td></td>
+      </tr>
+      <?php endwhile;?>
+    </table>
+  </div>
   <?php
 function pre_r($array)
 {
@@ -35,7 +56,6 @@ function pre_r($array)
     print_r($array);
     echo '</pre>';
 }
-
 ?>
 
   <div class="row justify-content-center">
