@@ -1,7 +1,7 @@
 <?php
 
 // Create array
-$fruits = ["Banana", "Apple", "Orange"];
+$fruits = ["Banana", "Apple", "Orange", "Grapes"];
 
 // Print the whole array
 echo '<pre>';
@@ -9,14 +9,14 @@ var_dump($fruits); // print_r
 echo '</pre>';
 
 // Get element by index
-echo $fruits[1].'<br>';
+echo $fruits[0].'<br>';
 
 // Set element by index
 $fruits[0] = "Peach";
 
 // Check if array has element at index 2
 echo '<pre>';
-var_dump(isset($fruits[2]));  // Change age into 5
+var_dump(isset($fruits[6]));  // Change age into 5
 echo '</pre>';
 
 // Append element
@@ -62,7 +62,7 @@ var_dump(array_search("Peach", $fruits));
 echo '</pre>';
 
 // Merge two arrays
-$vegetables = ['Potato', 'Cucumber'];
+$vegetables = ['Potato', 'Cucumber', 'peas'];
 echo '<pre>';
 var_dump(array_merge($fruits, $vegetables));
 var_dump([...$fruits, ...$vegetables]); // Since PHP 7.4
@@ -76,9 +76,11 @@ echo '</pre>';
 
 // Filter, map, reduce of array
 $numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-$evens = array_filter($numbers, function($n){ // fn($n) => $n % 2 === 0
+$evens = array_filter($numbers, fn($n) => $n % 2 ===0);
+/*function($n)
+{ // fn($n) => $n % 2 === 0 ...7.4
     return $n % 2 === 0;
-});
+});*/
 echo '<pre>';
 var_dump($evens);
 echo '</pre>';
@@ -91,24 +93,24 @@ echo '</pre>';
 $sum = array_reduce($numbers, fn($carry, $item) => $carry + $item);
 echo $sum.'<br>';
 
-// https://www.php.net/manual/en/ref.array.php
+echo "https://www.php.net/manual/en/ref.array.php";
 
 // ============================================
 // Associative arrays
 // ============================================
 
-// Create an associative array
+// Create an associative array...
 $person = [
-    'name' => 'Brad',
-    'surname' => 'Traversy',
-    'age' => 30,
-    'hobbies' => ['Tennis', 'Video Games'],
+    'name' => 'George',
+    'surname' => 'Karani',
+    'age' => 22,
+    'hobbies' => ['overthinking', 'Video Games'],
 ];
 // Get element by key
 echo $person['name'].'<br>';
 
 // Set element by key
-$person['channel'] = 'TraversyMedia';
+$person['channel'] = 'Mindberzerk';
 
 // Check if array has specific key
 echo '<pre>';
@@ -127,6 +129,16 @@ echo '</pre>';
 
 // Sorting associative arrays by values, by keys
 ksort($person); // ksort, krsort, asort, arsort
+echo '<pre>';
+var_dump($person);
+echo '</pre>';
+
+krsort($person); // ksort, krsort, asort, arsort
+echo '<pre>';
+var_dump($person);
+echo '</pre>';
+
+asort($person); // ksort, krsort, asort, arsort
 echo '<pre>';
 var_dump($person);
 echo '</pre>';

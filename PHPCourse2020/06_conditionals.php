@@ -4,16 +4,16 @@ $age = 20;
 $salary = 300000;
 
 //// 1. if condition
-//if ($age < 22) {       // 1.1 Without curly braces { }
-//    echo 'You are young man!!<br>';
-//}
+if ($age < 22) {       // 1.1 Without curly braces { }
+   echo 'You are young man!!<br>';
+}
 //
 //// 2. if condition - else
-//if ($age < 22) {
-//    echo 'You are young man!!<br>';
-//} else {
-//    echo 'You are not young man!!<br>';
-//}
+/*if ($age < 22) {
+    echo 'You are young man!!<br>';
+} else {
+    echo 'You are not young man!!<br>';
+}*/
 //
 //// 3. if condition1 AND condition2
 //if ($age < 22 && $salary > 500000) {

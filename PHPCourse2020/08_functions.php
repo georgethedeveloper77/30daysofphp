@@ -3,7 +3,7 @@
 // 1. Function which prints "Hello I am TheCodeholic"
 function hello()
 {
-    echo 'Hello I am TheCodeholic<br>';
+    echo 'Hello I am The<br>';
 }
 
 hello(); // 2
@@ -34,5 +34,8 @@ sum(9,10); // 5.2, 5.6. Add echo
 //    return array_reduce($nums, fn($coll, $n) => $coll + $n);
 //}
 //echo sum(1, 2, 3, 4, 6);
+
+
+//Classes and Objects => Relationship
 
 
