@@ -1,9 +1,9 @@
 <?php
 
 // 1. while
-while (true) { // Infinite loop: DON'T run this
-    // Do something constantly
-}
+//while (true) { // Infinite loop: DON'T run this
+//    // Do something constantly...infinite loops
+//}
 
 // 2. Loop with $counter
 // 2.2. Add $runLoop variable to above loop
@@ -21,7 +21,7 @@ while ($counter < 10) {
 // 3. do - while
 $counter = 0; // When counter is 10?
 do {
-    // Do some code right here
+    // Do some code right here ...done once
     $counter++;
 } while ($counter < 10);
 
@@ -38,10 +38,10 @@ foreach ($fruits as $i => $fruit) {
 
 // 6. Iterate Over associative array.
 $person = [
-    'name' => 'Brad',
-    'surname' => 'Traversy',
+    'name' => 'George',
+    'surname' => 'Karani',
     'age' => 30,
-    'hobbies' => ['Tennis', 'Video Games'],
+    'hobbies' => ['Overthinking', 'Video Games'],
 ];
 foreach ($person as $key => $value) {
     if ($key === 'hobbies') { // 8. Break when $key = 'hobbies'
