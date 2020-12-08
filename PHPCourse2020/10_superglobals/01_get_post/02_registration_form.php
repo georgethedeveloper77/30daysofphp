@@ -14,6 +14,8 @@ $password = '';
 $password_confirm = '';
 $cv_url = '';
 $postData = [];
+
+//request method ..check errors
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = post_data('username');
     $email = post_data('email');
@@ -52,7 +54,7 @@ function post_data($field)
         return false;
     }
     $data = $_POST[$field];
-    return htmlspecialchars(stripslashes(trim($data)));
+    return htmlspecialchars(stripslashes(trim($data)));  //removes slashes
 }
 
 

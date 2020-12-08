@@ -5,7 +5,7 @@ class Customers
     private $servername = "localhost";
     private $username   = "root";
     private $password   = "";
-    private $database   = "blog_database";
+    private $database   = "crud_oop1";
     public  $con;
 
 
