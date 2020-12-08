@@ -1,11 +1,13 @@
 <?php
 /**
- * User: TheCodeholic
- * Date: 2/8/2020
- * Time: 9:49 AM
+ * User: George
+ * Date: 08/12/2020
+ * Time: 17:30
  */
 
-// 1. Print the whole $_GET using var_dump
+///query parameters...  super global get
+
+// 1. Print the whole $_GET using var_dump  ...get query parameters
 echo '<pre>';
 var_dump($_GET);
 echo '</pre>';
@@ -15,9 +17,9 @@ $keyword = $_GET['keyword'];
 echo $keyword.'<br>';
 
 // 3. Check if the keyword isset in $_GET
-$keyword = '';
+$keyword = '';  //declare it has empty string
 if (isset($_GET['keyword'])) {
-    $keyword = $_GET['keyword'];
+    $keyword = $_GET['keyword'];  //if it exists ..print ...do whatever is necessary with keyword
 }
 
 // 4. Set the keyword back in search input
