@@ -1,14 +1,15 @@
 <?php
 
-// 1. Function which prints "Hello I am TheCodeholic"
-function hello()
+// 1. Function which prints "Hello I am Mindberzerk"
+//reusable piece of code.
+function hello($name)
 {
-    echo 'Hello I am The<br>';
+    echo 'Hello ' . $name . '<br>';
 }
 
-hello(); // 2
-hello(); // 3
-hello(); // 4
+hello('berx'); // 2
+hello('cyberpunk'); // 3
+hello('curse'); // 4
 
 // 5. Create sum of two functions
 function sum($a, $b)
