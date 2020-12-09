@@ -28,9 +28,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else if (strlen($username) < 6 || strlen($username) > 16){
         $errors['username'] = 'Username must be less than 16 and more than 6 chars';
     }
+    //email validation
     if (!$email) {
         $errors['email'] = REQUIRED_FIELD_ERROR;
-    } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
+    } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)){ // validation
         $errors['email'] = 'Please enter valid email address';
     }
     if (!$password) {
@@ -67,9 +68,7 @@ function post_data($field)
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body style="padding: 50px;">
 
