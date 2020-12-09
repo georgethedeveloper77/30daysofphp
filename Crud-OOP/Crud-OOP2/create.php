@@ -13,11 +13,14 @@ if (!empty($_POST)) {
     $phone = isset($_POST['phone']) ? $_POST['phone'] : '';
     $title = isset($_POST['title']) ? $_POST['title'] : '';
     $created = isset($_POST['created']) ? $_POST['created'] : date('F j Y, H:i:s');
+    
     // Insert new record into the contacts table
     $stmt = $pdo->prepare('INSERT INTO contacts VALUES (?, ?, ?, ?, ?, ?)');
     $stmt->execute([$id, $name, $email, $phone, $title, $created]);
     // Output message
     $msg = 'Created Successfully!';
+    //redirect index.php
+    header("location: index.php");
 }
 ?>
 
