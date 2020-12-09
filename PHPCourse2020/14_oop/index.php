@@ -1,6 +1,7 @@
 <?php
 
 // What is class and instance
+// What is class and instance
 
 require_once './Person.php';
 require_once './Student.php';
@@ -12,5 +13,5 @@ require_once './Student.php';
 //$p->setSalary(100);
 //echo $p->getSalary().'<br>';
 
-$s = new Student("Zura", '28', 1234);
+$s = new Student("George", '28', 1234);
 echo $s->name.'<br>';

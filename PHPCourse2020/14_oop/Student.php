@@ -5,7 +5,6 @@
  * Time: 5:49 PM
  */
 
-
 require_once './Person.php';
 
 class Student extends Person

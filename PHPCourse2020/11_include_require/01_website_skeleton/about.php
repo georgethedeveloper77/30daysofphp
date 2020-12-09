@@ -1,6 +1,6 @@
 <?php
 
-$companyName = 'TheCodeholic';
+$companyName = 'TheMindBerzerk';
 ?>
 
 <?php include "partials/header.php"; ?>

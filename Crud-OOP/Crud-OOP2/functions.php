@@ -1,4 +1,5 @@
 <?php
+//connect to database
 function pdo_connect_mysql() {
     $DATABASE_HOST = 'localhost';
     $DATABASE_USER = 'root';

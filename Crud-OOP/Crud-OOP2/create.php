@@ -29,11 +29,11 @@ if (!empty($_POST)) {
         <label for="id">ID</label>
         <label for="name">Name</label>
         <input type="text" name="id" placeholder="26" value="auto" id="id">
-        <input type="text" name="name" placeholder="John Doe" id="name">
+        <input type="text" name="name" placeholder="George Karani" id="name">
         <label for="email">Email</label>
         <label for="phone">Phone</label>
-        <input type="text" name="email" placeholder="johndoe@example.com" id="email">
-        <input type="text" name="phone" placeholder="2025550143" id="phone">
+        <input type="text" name="email" placeholder="georgekarani77@gmail.com" id="email">
+        <input type="text" name="phone" placeholder="0700606199" id="phone">
         <label for="title">Title</label>
         <label for="created">Created</label>
         <input type="text" name="title" placeholder="Employee" id="title">
