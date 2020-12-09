@@ -1,3 +1,6 @@
+<!-- //session store info on user data -->
+<!-- session => server side, session id
+cookies => browser -->
 <?php
 // https://www.w3schools.com/php/php_sessions.asp
 // Using sessions count how many times the user opens the page in a single session
@@ -11,8 +14,8 @@ echo session_id();
 $_SESSION['page_count'] = $_SESSION['page_count'] ?? 0;
 $_SESSION['page_count']++;
 
-if ($_SESSION['page_count'] > 10){
-    echo "Thank you for visiting our website 10 times";
+if ($_SESSION['page_count'] > 5){
+    echo "<br> " . " Thank you for visiting our website 5 times";
     session_unset();
     session_destroy();
 }
@@ -29,6 +32,6 @@ if ($_SESSION['page_count'] > 10){
     <title>Document</title>
 </head>
 <body>
-<h1>My Awesome page visited: <?php echo $_SESSION['page_count'] ?? 0 ?></h1>
+<h1>You have Visited Page: <?php echo $_SESSION['page_count'] ?? 0 ?></h1>
 </body>
 </html>

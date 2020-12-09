@@ -5,5 +5,5 @@
 // on every request/response
 
 // 2. How to set cookies
-setcookie('name', 'TheCodeholic', time() + 60);
+setcookie('name', 'TheMindBerzerk', time() + 60);
 
