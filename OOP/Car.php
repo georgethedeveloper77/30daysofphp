@@ -19,6 +19,7 @@ class Car
         }
 
         public function __destruct(){
+            echo "I'm destroyed: " .$this->color.PHP_EOL;
 
         }
 
@@ -52,7 +53,10 @@ class Car
 $myCar = new Car('green', 2500);
 $myCar2 = new Car('white', 1800);
 echo $myCar->getColor(). PHP_EOL;
-echo  $myCar2->getColor();
+echo  $myCar2->getColor(). PHP_EOL;
+
+unset($myCar);
+//sleep(seconds: 2);
 // //instance
 // $myCar = new Car();
 // $myCar->setColor( 'green');
