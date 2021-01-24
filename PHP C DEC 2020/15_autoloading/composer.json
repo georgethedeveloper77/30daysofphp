@@ -1,0 +1,17 @@
+{
+    "name": "ras/15_autoloading",
+    "authors": [
+        {
+            "name": "georgethedeveloper",
+            "email": "georgekarani77@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "./app"
+        }
+    }
+}
