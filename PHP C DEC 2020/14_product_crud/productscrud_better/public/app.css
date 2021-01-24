@@ -1,0 +1,13 @@
+body {
+    padding: 50px;
+}
+
+.product-img {
+    width: 50px;
+}
+.product-img-view {
+    width: 120px;
+}
+
+/* php -S localhost:8080
+*/

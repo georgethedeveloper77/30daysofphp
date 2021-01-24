@@ -1,0 +1,15 @@
+cd..
+php -S localhost:8080
+
+...create custom route
+
+....controllers
+classes
+
+...composer init
+"autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    }
+

@@ -1,0 +1,15 @@
+{
+    "name": "ras/productscrud_good",
+    "authors": [
+        {
+            "name": "georgethedeveloper",
+            "email": "georgekarani77@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    }
+}
