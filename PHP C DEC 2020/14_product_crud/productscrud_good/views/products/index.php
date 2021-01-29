@@ -11,6 +11,12 @@
       </div>
     </div>
 </form>
+ <p>
+     <?php
+     echo "my name is " . $myname;
+     ?>
+ </p>
+
 <table class="table">
     <thead>
     <tr>

@@ -6,8 +6,8 @@ If you are interested to see final files switch to [final-version](https://githu
 
 The video covers all the basic things about PHP. 
 
- - Comments
- - Variables
+- Comments
+- Variables
  - Numbers
  - Strings
  - Arrays
@@ -24,3 +24,4 @@ The video covers all the basic things about PHP.
     - File uploading and file validation
     - Working with mysql
  - Composer and autoloading
+ - 

@@ -1,5 +1,7 @@
 <?php
-
+/**
+ *
+ */
 
 namespace app\models;
 
@@ -7,7 +9,12 @@ namespace app\models;
 use app\Database;
 use app\helpers\UtilHelper;
 
-
+/**
+ * Class Product
+ *
+ *
+ * @package app\models
+ */
 class Product
 {
     public ?int $id = null;

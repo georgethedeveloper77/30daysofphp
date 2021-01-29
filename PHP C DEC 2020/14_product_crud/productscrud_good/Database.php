@@ -1,29 +1,34 @@
 <?php
-/**
- * User: TheCodeholic
- * Date: 10/11/2020
- * Time: 10:33 AM
- */
+
 
 namespace app;
 
 use app\models\Product;
 use PDO;
 
+/**
+ * Class Database
+ *
+ *
+ */
 
 class Database
 {
+    //pdo as a class property, instance
     public $pdo = null;
     public static ?Database $db = null;
 
     public function __construct()
     {
-        // \name of that class...use pdo
+        //specify namespace
         $this->pdo = new PDO('mysql:host=localhost;port=3306;dbname=productscrud_good', 'root', '');
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         self::$db = $this;
     }
 
+    /* Get products..pdo $this
+    * 
+    */
     public function getProducts($keyword = '')
     {
         if ($keyword) {

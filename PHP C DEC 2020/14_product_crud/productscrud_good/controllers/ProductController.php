@@ -1,25 +1,34 @@
 <?php
 
-
 namespace app\controllers;
 
 use app\models\Product;
 use app\Router;
 
+/**
+ * Class ProductController
+ *
+ *
+ * @package app\controllers
+ */
 
 class ProductController
 {
-    public function index(Router $router)
+    //index which will render list of products
+    static public function  index(Router $router)
     {
         $keyword = $_GET['search'] ?? '';
         $products = $router->database->getProducts($keyword);
+        $myname = "george karani";
         $router->renderView('products/index', [
             'products' => $products,
-            'keyword' => $keyword
+            'keyword' => $keyword,
+            'myname' => $myname
         ]);
     }
 
-    public function create(Router $router)
+    //create
+    static public function create(Router $router)
     {
         $productData = [
             'image' => ''
@@ -41,7 +50,8 @@ class ProductController
         ]);
     }
 
-    public function update(Router $router)
+    //update
+static public function update(Router $router)
     {
         $id = $_GET['id'] ?? null;
         if (!$id) {
@@ -68,7 +78,8 @@ class ProductController
         ]);
     }
 
-    public function delete(Router $router)
+    //Delete
+    static public function delete(Router $router)
     {
         $id = $_POST['id'] ?? null;
         if (!$id) {

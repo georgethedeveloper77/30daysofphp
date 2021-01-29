@@ -1,10 +1,17 @@
 <?php
-
+/**
+ *
+ */
 
 namespace app\helpers;
 
 
+/**
+ * Class UtilHelper
+ *
 
+ * @package app\helpers
+ */
 class UtilHelper
 {
     public static function randomString($n)
